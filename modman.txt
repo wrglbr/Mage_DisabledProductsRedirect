@@ -1,0 +1,2 @@
+BPMedia_Disabledproducts.xml	app/etc/modules/BPMedia_Disabledproducts.xml
+BPMedia/* 						app/code/local/BPMedia/

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <BPMedia_Disabledproducts>
+      <version>0.1.1</version>
+    </BPMedia_Disabledproducts>
+  </modules>
+  <global>
+  	<models>
+  		<disabledproducts>
+  			<class>BPMedia_Disabledproducts_Model</class>
+  		</disabledproducts>
+  	</models>
+    <helpers>
+      <disabledproducts>
+        <class>BPMedia_Disabledproducts_Helper</class>
+      </disabledproducts>
+    </helpers>
+
+</global>
+<frontend>
+ <events>
+            <controller_action_predispatch_catalog_product_view>
+                <observers>
+                    <disabledproducts>
+                        <type>singleton</type>
+                        <class>BPMedia_Disabledproducts_Model_Observer</class>
+                        <method>catalogProductViewPredispatch</method>
+                    </disabledproducts>
+                </observers>
+            </controller_action_predispatch_catalog_product_view>
+           
+        </events>
+</frontend>
+</config> 
